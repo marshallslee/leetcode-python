@@ -10,7 +10,7 @@ def reverse(num):
         mod = num % 10
         num //= 10
         str_result += str(mod)
-    result = int(str_result) * -1
+    result = int(str_result)
     return result
 
 
