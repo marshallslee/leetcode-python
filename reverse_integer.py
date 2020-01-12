@@ -3,15 +3,26 @@
 
 
 def reverse(num):
-    str_result = ""
-    repeat = len(str(num))
+    result = 0
+    original_num = num
 
-    for i in range(repeat):
+    if original_num < 0:
+        num *= -1
+    else:
+        pass
+
+    for i in range(len(str(num))):
         mod = num % 10
         num //= 10
-        str_result += str(mod)
-    result = int(str_result)
+        result = result * 10 + mod
+
+    if original_num < 0:
+        result *= -1
+
+    if result > 2 ** 31 or result < -(2 ** 31):
+        return 0
+
     return result
 
 
-print(reverse(1203))
+print(reverse(1534236469))
