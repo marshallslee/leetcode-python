@@ -1,3 +1,7 @@
+# Date: February 4, 2020 (TUE)
+# Link: https://leetcode.com/problems/rotate-array/
+
+
 def rotate(nums, k):
     tmp_arr = [None] * len(nums)
     for i in range(len(nums)):
